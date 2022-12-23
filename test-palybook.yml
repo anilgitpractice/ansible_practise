@@ -1,0 +1,6 @@
+---
+  - name: Executing linux commands with shell module
+    hosts: localhost
+    become: yes
+    tasks:
+      - import_tasks: shellmodule.yml
