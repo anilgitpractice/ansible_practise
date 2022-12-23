@@ -1,0 +1,21 @@
+---
+  - name: Execute uptime with shell module
+    shell: uptime
+    register: uptimeoutput
+  - debug: msg="{{uptimeoutput.stdout_lines}}"
+
+  - name: Execute the df -hT with shellmodule.
+    shell: df -hT
+    register: dfoutput
+  - debug: msg="{{dfoutput.stdout_lines}}"
+
+  - name: Execute hostname -f with shellmodule
+    shell: hostname -f
+    register: hostnameoutput
+  - debug: msg="{{hostnameoutput.stdout_lines}}"
+
+  - name: Execute ping google.com with shellmodule
+    shell: ping -c3 google.com
+    register: pinggooglecomoutput
+  - debug: msg="{{pinggooglecomoutput.stdout_lines}}"
+
